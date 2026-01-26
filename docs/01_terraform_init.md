@@ -159,8 +159,34 @@ C’est l’équivalent d’un **"hello world" d’infrastructure"**.
 - ✔ validation de la mécanique uniquement
 
 ---
+## 8. Vérification explicite de la connexion GCP
 
-## 8. Étape suivante
+### 8.1 gcloud
+
+```bash
+gcloud auth list
+gcloud config list
+gcloud projects describe terraform-gcp-sfeir
+```
+
+---
+
+### 8.2 ADC (Application Default Credentials)
+
+```bash
+gcloud auth application-default print-access-token
+```
+
+---
+
+### 8.3 Terraform
+
+```bash
+terraform plan
+```
+
+Si cette commande s’exécute sans erreur, la connexion Terraform ↔ GCP est valide.
+## 9. Étape suivante
 
 La prochaine étape consistera à :
 - introduire les **variables et locals**,
