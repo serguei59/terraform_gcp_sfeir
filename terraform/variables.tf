@@ -13,3 +13,8 @@ variable "tf_instance" {
   description = "nom de l'instance"
   type = string  
 }
+
+variable "tf_firewall" {
+  description = "nom du firewall"
+  type = string
+}
