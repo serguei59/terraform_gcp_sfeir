@@ -8,3 +8,8 @@ variable "region" {
   type = string
   default = "europe-west1"
 }
+
+variable "tf_instance" {
+  description = "nom de l'instance"
+  type = string  
+}
